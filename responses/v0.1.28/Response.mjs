@@ -155,7 +155,7 @@ export default class Response extends BaseResponse {
         let data = raw.data;
         let message = raw.message !== undefined ? raw.message : null;
         let error = raw.error !== undefined && raw.error !== null ? Error.fromRaw(raw.error) : null;
-        let metadata = raw.metadata !== undefined ? raw.metadata : null;
+        let metadata = raw.meta !== undefined ? raw.meta : null;
         let extensions = raw.extensions !== undefined ? raw.extensions : {};
 
         return new Response({
