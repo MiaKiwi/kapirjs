@@ -86,7 +86,7 @@ export default class Error extends BaseError {
 
 
     static fromRaw(raw) {
-        raw.suberrors = raw.error.errors;
+        raw.suberrors = raw.errors;
         delete raw.errors;
 
         return this.fromObject(raw);
